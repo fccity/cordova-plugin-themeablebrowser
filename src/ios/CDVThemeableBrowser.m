@@ -328,6 +328,8 @@
                                    initWithRootViewController:self.themeableBrowserViewController];
     nav.orientationDelegate = self.themeableBrowserViewController;
     nav.navigationBarHidden = YES;
+    // 2019-12-10 City: default full screen
+    nav.modalPresentationStyle = UIModalPresentationFullScreen;
     // Run later to avoid the "took a long time" log message.
     dispatch_async(dispatch_get_main_queue(), ^{
         if (self.themeableBrowserViewController != nil) {
